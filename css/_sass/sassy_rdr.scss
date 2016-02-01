@@ -1,0 +1,21 @@
+.black {
+    color: #000;
+}
+
+/* next step is to figure out how to if-then and move it over haha */
+
+$boolean: true !default
+    
+=simple-mixin
+    @if $boolean
+        @debug "boolean is #{$boolean}"
+        display:block
+    @else
+        @debug "$boolean is #{$boolean}"
+        display:none
+    
+.some-selector
+    +simple-mixin
+
+
+/* to run: sass sassy_rdr.scss sassy_rdr.css */

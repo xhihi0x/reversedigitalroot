@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<!-- For 999 -->
+
+
+<head>
+
+    <title>Reverse Digital Root and other 999 utilities</title>
+
+    
+    <!-- Javascript -->
+    <script src="reverse_digital_root.js"></script>
+    <script src="parser.js"></script>
+
+    <!--Javascript utility-->
+    <script src="utility.js"></script>
+    <!-- JQuery -->
+    <script src="library/jquery.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="library/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel= "stylesheet">
+    
+
+    <!--Bootstrap second CSS -->
+
+    
+    
+    <!-- CSS -->
+
+    <link href="css/reverse_digital_root.css" rel="stylesheet">
+
+    <!-- Sassy CSS -->
+    <link href="css/sassy_rdr.css" rel="stylesheet">
+    
+</head>
+
+
+<div class="body">
+
+
+
+    <!--Navbar-->
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="reverse_digital_root.html">Reverse Digital Root</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a>Feedback</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!--end navbar-->
+
+    <div class="container-fluid">
+                <!--        end container -->
+
+        <div class="Title">
+            <h2>Reverse Digital Root</h2></div>
+        <p>As a fan of the game 999 whom is currently playing it, knowing which people can go thru which doors is very useful. I've made this for use (and also if you ever need reverse digital root)</p>
+
+        <br>
+        <!--         for testing      -->
+        <div class="hidden">
+            <h2>Check Reverse Digital Root</h2>
+            <input type="button" class="button" value="Function: Test- Digital Root" onclick="test()" />
+
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+        <h2>Digital Root Calculator</h2> Given a positive integer, finds the digital root.
+
+        <p>
+            <input type="text" id="digital_root_input" value="">
+            <input type="button" value="Calculate!" onclick="do_things('DR')">
+        </p>
+        <p>Digital Root: <span id="digital_root_output"> -- </span></p>
+
+        <br>
+
+        <h2>Reverse Digital Root Calculator</h2>
+
+
+        <h3>By Range</h3>
+        <p>Finds all possible integers within range R that can make the target Digital Root.</p>
+        <br>
+
+        <p>Target Digital Root:
+            <input type="text" id="target_dr_by_range" class="target_dr" value="">
+        </p>
+        <p>Range R from:
+            <input type="text" id="range0" value="0"> to
+            <input type="text" id="range1" value="1">
+            <input type="button" value="Calculate!" onclick="do_things('RDRR')">
+        </p>
+        <br>
+        <p>Possible Integers: <span id="rdrr_toggle"> -- </span> </p>
+        <p id="reverse_output_by_range"></p>
+
+        <br>
+
+        <!--    Maybe I should make some sort of visual guide so that it is very clear how it would be.  Or I could write some text in there to go?  Grey text or something that disappears once you've gotten it?  Auto complete?-->
+
+        <h3>By Combination</h3>
+        <p>Given a set such as [1,2,3,4,5,6,7,8, 14, 1523, 12] and a target digital root, finds combinations of all possible integers in that set that could make the target Digital Root. Please input your set in the format: 1, 2, 3, 4, 5, 6, 7, 8</p>
+        <br>
+        <p>Starting Set:
+            <input type="text" id="set_combi" value="">
+        </p>
+        <p>Target Digital Root:
+            <input type="text" id="target_dr_combi" class="target_dr" value="">
+            <input type="button" value="Calculate!" onclick="do_things('RDR')">
+        </p>
+        <br>
+        <br>
+        <div id="setusedp" class="hidden">
+            <p>Starting Set used: <span id="setused"></span></p>
+        </div>
+        <p>Possible Integers: <span id="rdr_toggle"> -- </span></p>
+        <p id="rdr_output"></p>
+        <br>
+        <h3>999 optimized</h3>
+        <p>Given the set [1, 2, 3, 4, 5, 6, 7, 8, 9], finds combinations of all possible integers (people) that can make the target Digital Root.</p>
+        <br>
+
+        <p>Target Digital Root:
+            <input type="text" id="target_dr_999" class="target_dr" value="">
+            <input type="button" value="Calculate!" onclick="do_things('999RDR')">
+            <!--Todo, make do things-->
+        </p>
+        <p>Result: <span id="reverse_output_999"> --</span></p>
+
+
+
+        <br>
+        <br>
+  </div>
+</div>
+
+</html>
