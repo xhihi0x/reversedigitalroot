@@ -68,6 +68,7 @@ function printCombi(S){
  */
 function reverseDigitalRootByRange(S, dr) {
     
+    
     //s to string, and n is a number counter
     var base, digiroot = 0, s = "", n = S[0]; //number counter
     //find the lowest number that adds to the digital root within the base
@@ -78,9 +79,12 @@ function reverseDigitalRootByRange(S, dr) {
         n++;
     }
     
+
    
     s = s + "\n" + base;
     n = base;
+    
+
     //base is correct, now add multiples of 9 until base is > than b in [a,b].
     
     var i = 0;
@@ -93,6 +97,9 @@ function reverseDigitalRootByRange(S, dr) {
         s = s + "\n" + n; //include it in the string s
         i++;
     }
+    
+    //get rid of the repeated number @ the beginning. quicksloppy fix.
+    s = s.slice(3);
     
     if (base == undefined){  //how to test if s is null
         return "No reverse digital roots in that given range";

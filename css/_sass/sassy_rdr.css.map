@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,MAAO;EACH,KAAK,EAAE,IAAI",
-"sources": ["sassy_rdr.scss"],
-"names": [],
-"file": "sassy_rdr.css"
-}
